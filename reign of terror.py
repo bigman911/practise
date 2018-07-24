@@ -66,7 +66,7 @@ if start == "1":
                 time.sleep(1)
                 print("Get the question right to think an excuse")
             time.sleep(1)
-            q = input("When was St. Georges founded?\n 1-1967 2-1987 3  -1978")
+            q = input("When was St. Georges founded?\n 1-1967 2-1987 3-1978")
             if q == "3":
                 print("You say you were asking the time and get away with it, \n  +50 points ")
                 count = count +50

@@ -85,7 +85,7 @@ if start == "1":
         if c1 == "2":
             print("You come to the door of the English room, its very loud,from what you can "
               "hear it's ranting about female rights.\n As you open the door the student who was making the noise is"
-              "being caned in front of the entire class")
+              " being caned in front of the entire class")
             time.sleep(1)
 c2b = input("What do  you do? 1-Nothing or 2-Punch the teacher in the throat")   #branch 2
 if c2b == "2":
@@ -110,10 +110,10 @@ if c2b == "2":
                         print("Slade got you\n GAME OVER", count, "points")
                         hisc.write(str(user + "-" + str(count) + "\n"))
                         quit()
-                    if secondtime - firsttime <= 5:
-                        print("You got away \n +200 points")
-                        count = count + 200
-                        break 
+                if secondtime - firsttime <= 5:
+                    print("You got away \n +200 points")
+                    count = count + 200
+                    break 
                 
             
             

@@ -74,6 +74,20 @@ if start == "1":
 
                 c3a = input("It's break time,\n where do you go?"
                            "1-Libary 2-Playground")
+                if c3a == "1":
+                    c4a = input("You walk into the libary, and someone is crying in the corner.\n"
+                            "Slade walks over to him and hits him with a cane."
+                            "\n What do you do? 1-Hit Slade with a book 2-Allow Derek to hit you as well")
+                    if c4a == "2":
+                        print("Slade got you\n GAME OVER", count, "points")
+                        hisc.write(str(user + "-" + str(count) + "\n"))
+                        quit()
+                    if c4a == "1":
+                        p = input("What colour did Slade go when he died?\n"
+                              "1-Red 2-Brown 3-Green")
+                        if p == "Green" or p == "green":
+                            print("Slade got knocked out and broke his neck on the table.\n+150 points")
+                            count = count + 150
             else:
                 print("Slade got you\n GAME OVER", count, "points")
                 hisc.write(str(user + "-" + str(count) + "\n"))

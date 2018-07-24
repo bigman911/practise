@@ -1,15 +1,5 @@
 import time
 hisc = open("highscore.txt", "a+")
-def countdown(no1) :
-    while no1 > 0 and timer_stop = False:
-        print (no1)
-        time.sleep(1)
-        no1 = no1 - 1
-        
-    if no1 == "0":
-        game_stop = True
-no = 0
-
 
 count = 0
 user = input("What's your username?")
@@ -91,28 +81,20 @@ if c2b == "2":
                 time.sleep(1)
                 print("Slade followed you and is chasing, \n Press enter to run, you have 5 seconds")
                 no = 0
+                input("")
                 print("Start pressing")
-                timer_stop = False
-                game_stop = False
-                countdown(5)
+                firsttime = time.time()
                 while no < 15:
                     input("")
                     no = no + 1
-                    
-                if no >= "15"and game_stop = False:
-                    timer_stop = True
-                    Print("blank text")
-
-                if game_stop == True:
-                       print("Slade got you\n GAME OVER", count, "points")
-                       hisc.write(str(user + "-" + str(count) + "\n"))
-                       quit()
-
-
-            else: print("Slade got you\n GAME OVER",count,"points")
-            hisc.write(str(user + "-" + str(count) + "\n"))
-            quit()
-
+                    secondtime = time.time()
+                    if secondtime - firsttime >= 5:
+                        print("Slade got you\n GAME OVER", count, "points")
+                        hisc.write(str(user + "-" + str(count) + "\n"))
+                        quit()
+                    if secondtime - firsttime <= 5:
+                        print("sort me out")
+                
             if c2b == "1":
                 print("You stand awkwardly in front of the beating and get push over the desk and receive and black eye"
                   "from the slipper.\n You die from the impact. \nSlade got you\n GAME OVER",count,"points")

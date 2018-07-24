@@ -31,14 +31,14 @@ if start == "1":
                         count = count + 100
                         time.sleep(1)
                         c5a = input("You have a test tomorrow,\n Do you revise?")
-                        if c5a == "yes" or "Yes":
+                        if c5a == "yes" or c5a == "Yes":
                             print("You ace the test and get called out on cheating")
                             count = count -25
                             print("Slade got you\n GAME OVER", count, "points")
                             hisc.write(str(user + "-" + str(count) + "\n"))
                             quit()
 
-                        if c5a == "no" or "No":
+                        if c5a == "no" or c5a == "No":
                             k = input("What was Slade's other alias. \n 1-Edward Marsh 2-Gary Glitter")
                             if k == "1":
                                 count = count + 100

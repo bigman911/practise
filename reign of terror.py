@@ -93,8 +93,12 @@ if c2b == "2":
                         hisc.write(str(user + "-" + str(count) + "\n"))
                         quit()
                     if secondtime - firsttime <= 5:
-                        print("sort me out")
+                        print("You got away \n +200 points")
+                        count = count + 200
+                        break 
                 
+            
+            
             if c2b == "1":
                 print("You stand awkwardly in front of the beating and get push over the desk and receive and black eye"
                   "from the slipper.\n You die from the impact. \nSlade got you\n GAME OVER",count,"points")

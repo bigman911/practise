@@ -113,7 +113,7 @@ if c2b == "2":
                 if secondtime - firsttime <= 5:
                     print("You got away \n +200 points")
                     count = count + 200
-                    break 
+                   
                 
             
             

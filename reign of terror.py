@@ -1,6 +1,7 @@
 import time
 
 def ending(score):
+    hisc = open("highscore.txt", "a+")
     if score <= 0:
         print("You become Derek's personal slave\n", count, "points")
         hisc.write(str(user + "-" + str(count) + "\n"))
@@ -92,11 +93,13 @@ if start == "1":
             if c3a == "1":
                 c4a = input("You walk into the library, and someone is crying in the corner.\n"
                             "Slade walks over to him and hits him with a cane."
-                            "\n What do you do? 1-Hit Slade with a book 2-Allow Derek to hit you as well")
+                            "\n What do you do? 1-Hit Slade with a book 2-Ask Derek to stop") 
                 if c4a == "2":
+                    print("Slade didn't stop and decided to hit you aswell.\n -50 points")
+                    count = count - 25
                     print("Slade got you\n GAME OVER", count, "points")
-                    hisc.write(str(user + "-" + str(count) + "\n"))
-                    quit()
+                    time.sleep(1)
+                    ending(count)
                 if c4a == "1":
                     p = input("What colour did Slade go when he died?\n"
                               "1-Red 2-Brown 3-Green")

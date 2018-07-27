@@ -11,7 +11,7 @@ def ending(score):
         hisc.write(str(user + "-" + str(count) + "\n"))
         quit()
     elif score > 75:
-        print("You escape from the school and successfully get slade arrested\n", count, "points")
+        print("You escape from the school and successfully get slade, and the other paedos arrested\n", count, "points")
         hisc.write(str(user + "-" + str(count) + "\n"))
         quit()
 
@@ -78,7 +78,7 @@ if start == "1":
                 ending(count)
 
         if c2a == "1":
-            print("You ask the pupil on your desk but he ignores\n The teacher hears you and starts walking over")
+            print("You ask the pupil on your desk but he ignores you\n The teacher hears you and starts walking over")
             time.sleep(1)
             print("Get the question right to think an excuse")
         time.sleep(1)
@@ -106,8 +106,61 @@ if start == "1":
                     if p == "Green" or p == "green":
                         print("Slade got knocked out and broke his neck on the table.\n+150 points")
                         count = count + 150
+                        ending(count)
+                    else:
+                        count = count - 25
+                        print("Slade got you\n GAME OVER", count, "points")
+                        time.sleep(1)
+                        ending(count)
 
             if c3a == "2":
+                c4b = input("You go out to the playground and hear a noise coming from the back of the school \n"
+                            "You go towards the noise and see a group of three teachers crowded around a boy who "
+                            "looked very scared \n"
+                            "What do you do \n"
+                            "1-Ask the teachers what's going on 2-Try to watch from a hiding spot")
+                time.sleep(1)
+                if c4b == "1":
+                    print ("You are just about to ask but then you feel something hit you on the back of the head, "
+                           "as you fall to the ground you see slade standing above you, smiling")
+                    count = count - 25
+                    print("Slade got you\n GAME OVER", count, "points")
+                    time.sleep(1)
+                    ending(count)
+                if c4b == "2":
+                    c4c = input("Get the question right to find a hiding place \n"
+                          "Which teacher from St. Georges commit suicide after being arrested on suspicion of "
+                          "sexual assault \n"
+                          "1-Gerard Singer 2-Alan Williams 3-Alan Brigden")
+                    time.sleep(1)
+                    if c4c == "2":
+                        print("You successfully hide behind a bin \n +25 points \n"
+                              "You see the three teachers are telling the boy to take his clothes off")
+                        count = count + 25
+                        c4d = input("What do you do? \n"
+                                    "1-Record them with your phone 2-Call the police")
+                        time.sleep(1)
+                        if c4d == "1":
+                            print("You record them and then later on report them to the police, they get arrested and "
+                                  "each receive lifetime sentences in jail \n +100 points")
+                            count = count + 100
+                            ending(count)
+
+                        if c4d == "2":
+                            print("The teachers hear the phone ring and  immediately turn around. \n"
+                                  "They pull you out from behind the bin and knock you out")
+                            count = count - 25
+                            print("Slade got you\n GAME OVER", count, "points")
+                            time.sleep(1)
+                            ending(count)
+                    else:
+                        print("You are trying to find a hiding place when one of the teachers turns around and sees "
+                              "you, he grabs you and puts you next to the other boy")
+                        count = count - 25
+                        print("Slade got you\n GAME OVER", count, "points")
+                        time.sleep(1)
+                        ending(count)
+
 
 
         else:
